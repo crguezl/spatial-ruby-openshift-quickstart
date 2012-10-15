@@ -1,7 +1,7 @@
 development:
   sessions:
     default:
-      database: socialshift
+      database: spatialapp
       hosts:
         - localhost:27017
 
