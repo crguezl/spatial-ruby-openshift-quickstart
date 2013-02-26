@@ -10,6 +10,6 @@ production:
     default:
       database: <%= ENV['OPENSHIFT_APP_NAME'] %>
       hosts:
-        - <%= ENV['OPENSHIFT_NOSQL_DB_HOST'] || 'localhost' %>:<%= ENV['OPENSHIFT_NOSQL_DB_PORT'] || 27017 %>
-      username: <%= ENV['OPENSHIFT_NOSQL_DB_USERNAME'] %>
-      password: <%= ENV['OPENSHIFT_NOSQL_DB_PASSWORD'] %>
+        - <%= ENV['OPENSHIFT_MONGODB_DB_HOST'] || 'localhost' %>:<%= ENV['OPENSHIFT_MONGODB_DB_PORT'] || 27017 %>
+      username: <%= ENV['OPENSHIFT_MONGODB_DB_USERNAME'] %>
+      password: <%= ENV['OPENSHIFT_MONGODB_DB_PASSWORD'] %>
