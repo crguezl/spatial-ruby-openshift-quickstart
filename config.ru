@@ -17,7 +17,7 @@ class Park
   index({ :pos => '2d' })
 
   def self.from_params(params)
-    scope = where(:pos => {'$near' => [params['lon'], params['lat']]})
+    scope = where(:pos => {'$near' => [Float(params['lon']), Float(params['lat'])]})
     scope = scope.where(:Name => {'$regex' => Regexp.new(params['name'], true)}) if params['name']
     scope.all
   end
